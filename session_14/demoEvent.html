@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #header {
+        width: 300px;
+        height: 200px;
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header" onmouseover="onMouseOver()"></div>
+    <input type="text" onkeydown="handlKeyDown(event)" />
+    <script>
+      const header = document.getElementById("header");
+
+      header.addEventListener("mousedown", () => {
+        console.log("mousedown");
+      });
+      header.addEventListener("mouseup", () => {
+        console.log("mouseup");
+      });
+      header.addEventListener("click", () => {
+        alert("Trúng số rồi!!!");
+        console.log("click");
+      });
+      header.addEventListener("mousemove", () => {
+        console.log("mousemove");
+      });
+      function onMouseOver() {
+        console.log("mouseover");
+      }
+
+      //   Xử lý keyboard event
+      function handlKeyDown(element) {
+        console.log("Hello input", element);
+      }
+      document.addEventListener("keydown", (event) => {
+        console.log("Hello");
+      });
+    </script>
+  </body>
+</html>

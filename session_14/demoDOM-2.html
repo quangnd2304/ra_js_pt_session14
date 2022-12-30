@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .text-1 {
+        background-color: green;
+        padding: 30px;
+        color: red;
+      }
+
+      .font-size {
+        font-size: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="title">Hello lớp partime Rikkei Academy</div>
+    <div id="title-2">Cùng học nào!! 2023</div>
+    <img src="" alt="ảnh test" />
+    <img src="" alt="ảnh test-2" />
+    <ul id="test-3"></ul>
+
+    <script>
+      const title = document.getElementById("title");
+      console.log(title);
+
+      //   Thay đổi inner
+      title.innerHTML = "<i>Tôi đã thay đổi</i>";
+
+      const title2 = document.querySelector("#title-2");
+      console.log("check title 2", title2);
+      title2.innerText = "<i>Chào mừng 2023</i>";
+
+      //   Thay đổi img
+
+      const img = document.querySelector("img");
+      console.log("check img", img);
+
+      //   thay đổi attribute của phần tử
+
+      img.src =
+        "https://cdn.chanhtuoi.com/uploads/2022/09/anh-chuc-mung-nam-moi-2023-1.jpg";
+      img.width = "300";
+      // Thay đổi thuộc tính onclick không được
+
+      img.onclick = "hi()";
+      img.setAttribute("onclick", "handleClick()");
+      img.setAttribute("width", "900px");
+      // khai báo hàm cho onclick
+      function handleClick() {
+        alert("Xin chào 2023");
+      }
+
+      //   Tạo phần tử mới trong HTML
+      const li = document.createElement("li");
+      li.innerHTML = "Car";
+      li.className = "text-1";
+      //   li.className = "text-1  font-size";
+
+      li.classList.add("font-size");
+      //   li.className = "";
+      const ul = document.getElementById("test-3");
+      ul.appendChild(li);
+    </script>
+  </body>
+</html>

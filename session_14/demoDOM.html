@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="h-1">Chào mừng đến với DOM</h1>
+
+    <input type="text" id="input-1" />
+    <p class="text-red"></p>
+    <p class="text-red"></p>
+    <p class="text-red"></p>
+    <ul>
+      <li>Cat</li>
+      <li>Dog</li>
+      <li>Pig</li>
+    </ul>
+
+    <ol>
+      <li>Lemon</li>
+      <li>Orange</li>
+      <li>Banana</li>
+    </ol>
+    <script>
+      const h1 = document.getElementById("h-1");
+      const getH1 = document.querySelector("#h-1");
+      console.log(h1);
+      console.log("truy vấn bằng query", getH1);
+
+      //   lấy thẻ ul
+      const ul = document.querySelector("ul");
+      //   lấy tất cả thẻ li trong ul
+      const lis = document.getElementsByTagName("li");
+      console.log("check tất cả li", lis);
+
+      // lấy tất cả thẻ li
+      const liOfUl = ul.querySelectorAll("li");
+      console.log("check tất cả li trong ul", liOfUl);
+    </script>
+  </body>
+</html>
